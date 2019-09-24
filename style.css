@@ -20,7 +20,7 @@ body
 }
 
 .services{
-    max-height: 300px;
+    max-height: 350px;
     overflow: hidden;
 }
 .services:after
@@ -46,6 +46,7 @@ body
     padding: 1%;
     height: 500px;
     position: relative;
+    text-align: justify;
 }
 
 .service:nth-child(1)
@@ -69,7 +70,7 @@ body
     padding: 10px;
     clear: left;
     margin: 20px 1%;
-
+    color: ##acb7ae;
     
 }
 .content p
@@ -81,6 +82,8 @@ body
     -webkit-column-rule:1px solid #ccc;
     column-rule:1px solid #ccc;
     text-align: justify;
+    color: #DCC7AA;
+
 }
 section,aside
 {
@@ -90,14 +93,17 @@ section,aside
     margin: 1%;
     background: #f2f2f2;
 }
-
 .columns:after
 {
     display: block;
     content: "";
     clear: both;
 }
-
+.columns
+{
+    color: #3a4660;
+    text-align: justify;
+}
 #banner
 {
 	max-height:300px;
