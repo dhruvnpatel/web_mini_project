@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<title>GALLERY</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img 
+{
+  margin-bottom: -7px
+}
+img:click
+{
+  -webkit-transform:scale(1.5); 
+    transform:scale(1.5);
+}
+.w3-row-padding img 
+{
+  margin-bottom: 12px
+}
+.container 
+{
+  position: relative;
+  font-family: Arial;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*ZOOM TEST*/
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+  </a>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1><b>GALLERY</b></h1>
+  <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p>
+</header>
+</div>
+
+<!-- Photo Grid -->
+<!--ZOOM TEST-->
+
+<div class="imageContainer">
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img id="myImg" img src="anavi.jpg" style="width:100%">
+<div class="container">
+  <img id="myImg" img src="cam.jpg" style="width:100%">
+  <div class="text-block">
+    <h4>Ashwin Ganesh</h4>
+  </div>
+</div>
+    <img id="myImg" img src="dog.jpg" style="width:100%">
+    <img id="myImg" img src="openmic.jpg" style="width:100%">
+<div class="container">
+  <img id="myImg" img src="palace.jpg" style="width:100%">
+  <div class="text-block">
+    <h4>Pawan</h4>
+  </div>
+</div>
+<div class="container">
+  <img id="myImg" img src="PH2.jpg" style="width:100%">
+  <div class="text-block">
+    <h4>Rajkumar</h4>
+  </div>
+</div>    
+  </div>
+
+  <div class="w3-third">
+  <div class="container">
+    <img id="myImg" img src="gagan1.jpg" style="width:100%">
+    <div class="text-block">
+      <h4>Gagan</h4>
+  </div>
+</div>    
+  <div class="container">
+    <img id="myImg" img src="gagan2.jpg" style="width:100%">
+    <div class="text-block">
+      <h4>Gagan</h4>
+  </div>
+</div>        
+  <div class="container">
+    <img id="myImg" img src="revath1.jpg" style="width:100%">
+    <div class="text-block">
+      <h4>Revath</h4>
+  </div>
+</div>         
+  <div class="container">
+    <img id="myImg" img src="revath2.jpg" style="width:100%">
+    <div class="text-block">
+      <h4>Revath</h4>
+  </div>
+</div> 
+<div class="container">
+    <img id="myImg" img src="gaurav.jpg" style="width:100%">
+    <div class="text-block">
+      <h4>Gaurav</h4>
+  </div>
+</div>       
+    <img id="myImg" img src="openmic2.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <div class="container">
+    <img id="myImg" img src="dhruv.jpg" style="width:100%">
+    <div class="text-block">
+      <h4>Dhruv</h4>
+  </div>
+</div>  
+<div class="container">
+    <img id="myImg" img src="dhruv2.jpg" style="width:100%">
+    <div class="text-block">
+      <h4>Dhruv</h4>
+  </div>
+</div>  
+<div class="container">
+    <img id="myImg" img src="dhruv3.jpg" style="width:100%">
+    <div class="text-block">
+      <h4>Dhruv</h4>
+  </div>
+</div>  
+<div class="container">
+    <img id="myImg" img src="dhruv4.jpg" style="width:100%">
+    <div class="text-block">
+      <h4>Dhruv</h4>
+  </div>
+</div>  
+<div class="container">
+    <img id="myImg"img src="dhruv6.jpg" style="width:100%">
+    <div class="text-block">
+      <h4>Dhruv</h4>
+  </div>
+</div>  
+  </div>
+</div>
+</div>
+</div> 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
+
+<!-- End Page Content -->
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
