@@ -1,0 +1,101 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  background-color: #379683
+}
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("PH.jpg");
+  min-height: 50%;
+  max-height: 20%;
+}
+.w3-bar .w3-button {
+  padding: 16px;
+}
+/*#banner
+{
+	max-height:10%;
+	overflow:hidden;
+	margin:3%;
+	position:relative;
+        width: 40%;
+        padding-left: 26.5%;
+    z-index: 0;
+}
+
+
+#banner h2{
+	position:absolute;
+	top:300px;
+	width:100%;
+	margin:0;
+	text-align:center;
+	color:#000;
+}*/
+
+.content
+{
+    padding: 10px;
+    clear: left;
+    margin: 20px 1%;
+    color: #acb7ae;
+    
+}
+.content p
+{
+    
+    color: #DCC7AA;
+
+}
+
+nav
+{
+    background: #333;
+    
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+    
+}
+/*nav ul:after
+{
+    content:"";
+    display: block;
+    clear: both;
+}
+nav li
+{   
+    list-style-type: none;
+    margin: 0 10px;
+    color: #fff;
+    float: right;
+}*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav li {
+  float: right;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+  background-color: #ff7803;
+}
